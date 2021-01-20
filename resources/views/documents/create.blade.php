@@ -23,7 +23,7 @@
     <br>
 
     <label >
-        Nombre:
+        Slug:
         <br>
         <input type="text" name="slug" value="{{old('slug')}}">
     </label>
