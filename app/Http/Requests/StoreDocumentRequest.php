@@ -24,7 +24,7 @@ class StoreDocumentRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' =>'required|max:10',
+            'name' =>'required',
             'description' => 'required|min:10',
             'category' => 'required'
         ];
