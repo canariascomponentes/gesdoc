@@ -33,7 +33,7 @@ class DocumentController extends Controller
         // ]); // Crea el documento y lo guarda directamente en la bbdd
         $document = Document::create($request->all()); //LA FORMA MAS SENCILLA DE CREAR DOCUMENTO. ASIGNACIÓN MASIVA EN EL MODELO DEBE TENER ACTIVADA LA PROPIEDAD FILLABLE
 
-        return redirect()->route('documents.show', $document->id);
+        return redirect()->route('documents.show', $document);
     }
 
     public function show(Document $document){
@@ -60,7 +60,7 @@ class DocumentController extends Controller
         // $document->save();
 
         $document->update($request->all()); //Asignación masiva
-        return redirect()->route('documents.show', $document->id);
+        return redirect()->route('documents.show', $document);
     }
 
     public function destroy(Document $document){
